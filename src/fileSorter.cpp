@@ -136,9 +136,13 @@ public:
 
 // function for the download folder
 std::string getUserDownloadsPath() {
-    char* home = std::getenv("HOME");
+    const char* home = std::getenv("HOME");
     if (!home) {
-        std::cerr << "[Error] HOME environment variable missing.\n";
+        home = std::getenv("USERPROFILE"); // Windows fallback
+    }
+    
+    if (!home) {
+        std::cerr << "[Error] HOME/USERPROFILE environment variable missing.\n";
         return "";
     }
     return std::string(home) + "/Downloads";
