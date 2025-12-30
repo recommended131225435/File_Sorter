@@ -32,7 +32,7 @@ FileSorter/
 ### Usage
 1. Compile the program:
 ```
-g++ -std=c++17 fileSorter.cpp -o FileSorter
+g++ -std=c++17 ./src/fileSorter.cpp -o FileSorter
 ```
 Run the program
 ```
