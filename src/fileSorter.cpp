@@ -138,7 +138,7 @@ public:
 std::string getUserDownloadsPath() {
     const char* home = std::getenv("HOME");
     if (!home) {
-        home = std::getenv("USERPROFILE"); // Windows fallback
+        home = std::getenv("USERPROFILE"); // for the indows fallback
     }
     
     if (!home) {
