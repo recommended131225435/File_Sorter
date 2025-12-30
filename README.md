@@ -16,18 +16,29 @@ fSort is a small project that automatically sorts files in a directory based on 
 - Designed for the user's Downloads directory by default.
 - Runs once and sorts all files in the target directory. 
 
-### Usage
-1. Compile the program:
+### Build Instructions
+Requirements
+CMake 3.12+
+Any modern C++ compiler with C++17 support (GCC, Clang, MSVC)
+
+### Build (Linux / macOS / Windows)
+From the project root directory:
 ```
-g++ -std=c++17 ./src/fileSorter.cpp -o FileSorter
+mkdir build
+cd build
+cmake ..
+cmake --build .
 ```
-Run the program
-```
+### Run
+**On Linux / macOS:**
+```bash
 ./FileSorter
 ```
-
-License
-
+**On Windows:**
+```bash
+.\FileSorter.exe
+```
+### License
 This project is licensed under the MIT License.
 You can view the full license [here](./LICENSE)
 
