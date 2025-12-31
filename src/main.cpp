@@ -17,6 +17,7 @@ std::string getUserDownloadsPath() {
 }
 
 int main() {
+    std::cout << "[fSort] Starting file sorting...\n";
     std::string path = getUserDownloadsPath();
     if (path.empty()) return 1;
 
@@ -24,8 +25,9 @@ int main() {
         FileWatcher watcher(path);
         watcher.startOnce();
     } catch (const std::exception& e) {
-        std::cerr << "[Fatal] " << e.what() << "\n";
+        std::cerr << "[fSort] Fatal error: " << e.what() << "\n";
         return 1;
     }
     return 0;
 }
+
